@@ -1,0 +1,54 @@
+/* src/pages/GameDetail.css */
+
+.game-detail-container {
+  padding: 20px;
+}
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.back-button:hover {
+  background-color: #4A90E2;
+}
+
+.detail-title {
+  text-align: left;
+}
+
+.detail-banner {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.detail-content h3 {
+  border-bottom: 2px solid #4A90E2;
+  padding-bottom: 5px;
+  margin-top: 30px;
+}
+
+.detail-content p {
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tags span {
+  background-color: #252525;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+}

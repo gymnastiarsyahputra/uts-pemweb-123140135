@@ -1,38 +1,109 @@
-.App {
+/* General Body & App Container Styling */
+body {
+  background-color: #151515;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
   text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Search Bar & Filters */
+.search-bar {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 15px;
+  margin-bottom: 40px;
+  align-items: center;
+}
+
+.search-bar input[type="text"] {
+  padding: 12px;
+  border: 1px solid #333;
+  background-color: #202020;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 300px;
+}
+
+.search-bar .filters label {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.search-bar select, .search-bar button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4A90E2; /* A nice blue for buttons */
   color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
-.App-link {
-  color: #61dafb;
+.search-bar button:hover {
+  background-color: #357ABD;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Games Grid */
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* Game Card Styling & Hover Effect */
+.game-card {
+  background-color: #202020;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none; /* Removes underline from Link */
+  color: inherit;
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(74, 144, 226, 0.4);
+}
+
+.game-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.game-card .game-info {
+  padding: 15px;
+}
+
+.game-card h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.game-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #aaa;
 }
